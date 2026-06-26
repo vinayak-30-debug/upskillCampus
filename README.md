@@ -1,0 +1,68 @@
+# File Organizer
+
+This Python project organizes files in a selected directory by moving them into folders such as Images, Documents, Videos, Audio, Archives, Code, Applications, Fonts, and Others.
+
+## Week 1 Focus
+
+The Week 1 report describes these goals:
+
+- Scan a directory.
+- Identify file types using file extensions.
+- Create category folders when needed.
+- Move files into the correct folders.
+- Handle already existing folders with conditional checks.
+- Use Python file handling with `os` or `shutil`.
+
+This version implements those points and also includes a simple Tkinter interface so the user can select a directory easily.
+
+## Files
+
+- `main.py`: Tkinter user interface.
+- `organizer.py`: File categorization and moving logic.
+- `settings.py`: Saved preferences for directory, output folder, recursive mode, and custom categories.
+- `USER_GUIDE.md`: User-facing instructions.
+- `test_organizer.py`: Unit tests for the backend organizer logic.
+
+## How to Run
+
+```bash
+python main.py
+```
+
+Choose a folder, then click **Organize Files**.
+
+## Week 2 Updates
+
+- Added support for more file types, including audio, archives, code files, applications, fonts, and structured document formats.
+- Added an `Organized_Files` folder so category folders stay together in one clean location.
+- Added a **Preview** button to scan files before moving them.
+- Added status messages and clearer error handling in the GUI.
+- Kept the logic modular with `main.py` for the interface and `organizer.py` for backend file handling.
+
+## Week 3 Updates
+
+- Improved the GUI with a clear button, progress indicator, and cleaner status updates.
+- Moved scan and organize operations to background threads so the interface remains responsive with larger folders.
+- Limited very large result displays while still showing the total number of files processed.
+- Improved preview accuracy when duplicate destination file names already exist.
+- Continued code refinement with reusable GUI helper methods.
+
+## Safety
+
+If a file with the same name already exists in a category folder, the program keeps both files by adding a number to the new file name.
+
+## Week 4 Final Updates
+
+- Added custom category support so users can define their own sorting rules.
+- Added saved preferences using `settings.json`.
+- Added optional recursive scanning for subfolders.
+- Added operation logging with timestamps in `organizer.log`.
+- Added a user guide and unit tests.
+
+## Final Testing
+
+Run:
+
+```bash
+python -m unittest test_organizer.py
+```
